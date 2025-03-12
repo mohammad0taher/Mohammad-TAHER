@@ -1,0 +1,47 @@
+#include<iostream>
+using namespace std;
+int number1;
+char oporator1;
+int number2;
+char opporator2;
+
+
+float result;
+
+
+
+int main()
+{
+	const std::string reset = "\033[0m"; // Reset to default color
+	const std::string blue = "\033[34m";  // Blue text
+	const std::string red = "\033[31m";   // Red text
+
+
+	cout << "enter first number: ";
+	cin >> number1;
+	cout << "enter firt oporator: ";
+	cin>> oporator1;
+	cout << "enter second number: ";
+	cin >> number2;
+	cout << "result = ";
+	
+	if (oporator1 == '+')
+	{
+		result = number1 + number2;
+	}
+	else if (oporator1 == '-')
+		result = number1 - number2;
+
+	else if (oporator1 == '*')
+		result = number1 * number2;
+
+	//else if (oporator1)
+		//result = number1 * number2;
+
+	else if (oporator1 == '/')
+		result = number1 / number2;
+
+	cout << result;
+	cout << red << "finish" << reset;
+    return 0;
+}
